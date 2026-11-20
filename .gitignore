@@ -1,0 +1,6 @@
+node_modules/
+dist/
+# Private key cap key: KHONG BAO GIO dua len git
+keygen/private.pem
+*.pem
+!config/public.pem

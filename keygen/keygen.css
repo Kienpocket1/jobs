@@ -1,0 +1,29 @@
+body { overflow: hidden; }
+.kg { display: grid; grid-template-columns: 420px 1fr; gap: 16px; padding: 16px; height: 100vh; }
+.kg .card { width: auto; overflow: auto; }
+.kg h1 { font-size: 20px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+select { width: 100%; background: var(--bg); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font: inherit; font-size: 16px; }
+input[type=date] { color-scheme: dark; }
+.warn { color: var(--accent); font-size: 13px; margin: 6px 0 0; }
+.warn:empty { display: none; }
+.hist { display: flex; flex-direction: column; min-height: 0; padding: 20px 0 0; }
+.hhead { display: flex; align-items: center; gap: 16px; padding: 0 20px 14px; }
+.hhead h1 { margin: 0; white-space: nowrap; }
+.hhead input { max-width: 340px; margin-left: auto; }
+.tablewrap { overflow: auto; flex: 1; border-top: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; user-select: text; }
+th { position: sticky; top: 0; background: var(--panel); text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+td { padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:hover td { background: var(--panel-2); }
+td .sub { color: var(--muted); font-size: 12px; }
+td.mono, td .mono, td:last-child { white-space: nowrap; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.badge.ok { background: rgba(34,197,94,.15); color: #86efac; }
+.badge.soon { background: rgba(245,165,36,.15); color: #fcd34d; }
+.badge.dead { background: rgba(239,68,68,.15); color: #fca5a5; }
+.badge.inf { background: rgba(255,255,255,.08); color: var(--text); }
+.mini { background: none; border: 1px solid var(--line); border-radius: 6px; padding: 2px 8px; font-size: 12px; color: var(--muted); margin-left: 6px; }
+.mini:hover { color: var(--text); border-color: rgba(255,255,255,.2); }
+tr.new td { background: rgba(245,165,36,.08); }
+#key { font-size: 13px; line-height: 1.5; }

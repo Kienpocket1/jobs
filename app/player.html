@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+<title>NDaudio Player</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+<div class="app">
+  <header>
+    <div class="brand"><span class="dot"></span>NDaudio Player <span id="lic" class="lic"></span></div>
+    <button id="add" class="btn">+ Thêm nhạc</button>
+    <button id="stopAll" class="btn danger">Dừng tất cả</button>
+    <div class="master"><span class="muted">Master</span><input id="master" type="range" min="0" max="100" value="80" aria-label="Master volume"><span id="masterVal" class="val">80</span></div>
+  </header>
+  <div class="main">
+    <section id="grid" class="grid" aria-label="20 slot nhạc"></section>
+    <aside id="panel"></aside>
+  </div>
+</div>
+<script type="module" src="player.js"></script>
+</body></html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+<title>NDaudio – Tool cấp key</title>
+<link rel="stylesheet" href="../app/style.css">
+<link rel="stylesheet" href="keygen.css">
+</head><body>
+<div class="kg">
+  <form id="form" class="card" novalidate>
+    <div class="brand"><span class="dot"></span>NDaudio – Tool cấp key</div>
+    <h1>Cấp key mới</h1>
+
+    <label for="name">Tên khách hàng *</label>
+    <input id="name" autocomplete="off" required>
+    <div class="two">
+      <div><label for="phone">Số điện thoại *</label><input id="phone" type="tel" autocomplete="off" required></div>
+      <div><label for="email">Email liên hệ</label><input id="email" type="email" autocomplete="off"></div>
+    </div>
+
+    <label for="mid">Mã máy khách *</label>
+    <input id="mid" class="mono" placeholder="XXXX-XXXX-XXXX-XXXX" spellcheck="false" required>
+    <p id="dup" class="warn"></p>
+
+    <label for="dur">Thời hạn key</label>
+    <div class="two">
+      <select id="dur">
+        <option value="1">1 tháng</option><option value="3">3 tháng</option><option value="6">6 tháng</option>
+        <option value="12" selected>12 tháng</option><option value="0">Vĩnh viễn</option><option value="custom">Chọn ngày…</option>
+      </select>
+      <input id="date" type="date" hidden aria-label="Ngày hết hạn">
+    </div>
+    <p id="expText" class="muted small"></p>
+
+    <p id="err" class="error" role="alert"></p>
+    <button id="go" class="btn primary wide" type="submit">Tạo key</button>
+
+    <div id="out" hidden>
+      <label>Key kích hoạt</label>
+      <div class="row"><output id="key" class="mono field"></output><button id="copy" type="button" class="btn">Copy</button></div>
+    </div>
+    <p class="muted small">Bản thật có thể làm thêm server cấp key online. Demo chưa làm.</p>
+  </form>
+
+  <section class="hist card">
+    <div class="hhead">
+      <h1>Lịch sử cấp key <span id="count" class="muted small"></span></h1>
+      <input id="q" type="search" placeholder="Tìm tên, SĐT, email, mã máy, key…" aria-label="Tìm trong lịch sử">
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Ngày cấp</th><th>Khách hàng</th><th>Mã máy</th><th>Hạn dùng</th><th>Key</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table>
+      <p id="empty" class="none">Chưa cấp key nào.</p>
+    </div>
+  </section>
+</div>
+<script src="keygen.js"></script>
+</body></html>

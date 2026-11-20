@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+<title>NDaudio Player – Kích hoạt</title>
+<link rel="stylesheet" href="style.css">
+</head><body class="center">
+<main class="card">
+  <div class="brand"><span class="dot"></span>NDaudio Player</div>
+  <h1>Kích hoạt bản quyền</h1>
+  <p class="muted">Gửi <b>Mã máy</b> cho NDaudio để nhận key. Key chỉ dùng được trên máy này.</p>
+  <label>Mã máy</label>
+  <div class="row"><output id="mid" class="mono field">Đang đọc…</output><button id="copy" class="btn" disabled>Copy</button></div>
+  <label for="key">Key kích hoạt</label>
+  <textarea id="key" class="mono" rows="4" placeholder="Dán key NDaudio gửi (Ctrl+V)" spellcheck="false" autofocus></textarea>
+  <p id="err" class="error" role="alert"></p>
+  <button id="go" class="btn primary wide">Kích hoạt</button>
+</main>
+<script src="activate.js"></script>
+</body></html>

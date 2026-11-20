@@ -1,0 +1,34 @@
+{
+  "name": "ndaudio-player-demo",
+  "version": "0.1.0",
+  "description": "NDaudio Player demo – phat nhac su kien, khoa ban quyen theo o cung",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron app/main.js",
+    "keygen": "electron keygen/main.js",
+    "test": "node shared/license.test.js",
+    "dist": "electron-builder --win portable",
+    "genkeys": "node keygen/genkeys.js"
+  },
+  "dependencies": {
+    "soundtouchjs": "^0.3.0"
+  },
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "vn.ndaudio.player",
+    "productName": "NDaudio Player",
+    "files": [
+      "app/**",
+      "shared/**",
+      "config/**",
+      "node_modules/soundtouchjs/dist/**",
+      "!shared/*.test.js"
+    ],
+    "win": {
+      "target": "portable"
+    }
+  }
+}
